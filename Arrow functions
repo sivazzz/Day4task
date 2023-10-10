@@ -1,0 +1,51 @@
+ // Find the odd number in an array
+ // Using an arrow function
+(function() {
+  let array = [1, 2, 3, 4, 5];
+  let oddNumbers = array.filter(num => num % 2 !== 0);
+  console.log(oddNumbers);
+ })();
+
+ 
+  //  convert all the strings to tittle caps
+  // Using an arrow function
+  (function() {
+    let stringArray = ['hello', 'iam', 'siva'];
+    let titleCasedArray = stringArray.map(str => str.charAt(0).toUpperCase() + str.slice(1));
+    console.log(titleCasedArray);
+  })();
+
+
+
+
+  //  sum of the all numbers in an array 
+  //  Using an arrow function
+  (function() {
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduce((total, num) => total + num, 0);
+    console.log(sum);
+  })();
+
+
+
+  //  return all prime numbers in an array
+  //  Using an arrow function
+  (function() {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let primeNumbers = numbers.filter(num => {
+      if (num <= 1) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    });
+    console.log(primeNumbers);
+  })();
+
+  // find the all palindroms in an array 
+  // Using an arrow function
+  (function() {
+    let words = [ 'level', 'madam', 'mom', 'noon', 'rotor'];
+    let palindromes = words.filter(word => word === word.split('').reverse().join(''));
+    console.log(palindromes);
+  })();
